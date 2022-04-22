@@ -11,4 +11,4 @@ Home Assistant auto-discovery supported
 
 ## Docker
 
-    docker run scootsoftware/glow2mqtt --glow_device GLOW_DEVICE --glow_username GLOW_USERNAME --glow_password GLOW_PASSWORD [--mqtt_address MQTT_ADDRESS] [--mqtt_port MQTT_PORT] [--mqtt_username MQTT_USERNAME] [--mqtt_password MQTT_PASSWORD] [--homeassistant] [--debug]
+

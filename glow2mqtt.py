@@ -4,6 +4,7 @@ import paho.mqtt.client as mqtt
 import argparse
 import sys
 import json
+import certifi
 
 # Parse command-line arguments
 parser = argparse.ArgumentParser(description='Glow MQTT Client.')
@@ -109,9 +110,10 @@ if (homeassistant):
 
 # Create Glow MQTT client
 mqttg = mqtt.Client()
+mqttg.tls_set(certifi.where())
 mqttg.on_connect = on_glow_connect
 mqttg.on_message = process_msg
 mqttg.username_pw_set(username,password)
-mqttg.connect("glowmqtt.energyhive.com", 1883, 60)
+mqttg.connect("glowmqtt.energyhive.com", 8883, 60)
 mqttg.loop_forever()
 
